@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: monospace, 'Courier New';
+}
+
+.output {
+    width: 100%;
+    height: 35%;
+    background-color: hsl(196, 100%, 43%);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.output>div {
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.operator {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.previousInput {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 500;
+}
+
+.equal {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.currentInput {
+    font-size: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.actions {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.operators {
+    border: 0.5px solid black;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    background-color: #333;
+
+}
+
+.operators>div {
+    width: 100%;
+    font-size: 3.75rem;
+}
+
+
+.add,
+.substr {
+    height: 35%;
+}
+
+.multiDiv {
+    height: 30%;
+}
+
+.add,
+.substr,
+.multiDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.multi,
+.division {
+    width: 35%;
+    height: 100%;
+}
+
+.clear {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.multi {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+.division {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    padding-right: 25px;
+}
+
+.substr {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.add:hover,
+.substr:hover,
+.multi:hover,
+.division:hover,
+.clear:hover {
+    color: hsl(196, 100%, 43%);
+    cursor: default;
+}
