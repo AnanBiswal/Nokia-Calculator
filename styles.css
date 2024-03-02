@@ -141,3 +141,8 @@ body {
     color: hsl(196, 100%, 43%);
     cursor: default;
 }
+
+p {
+    font-weight: 600;
+    margin-top: 30px;
+}
