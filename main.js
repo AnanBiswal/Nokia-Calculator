@@ -33,22 +33,36 @@ clear.onclick = () => {
         }
     }
 };
-equals.onkeyup = function (event) {
+equals.onkeyup = (event) => {
     if (event.keyCode === 13) {
-        if (operatorSymbol.textContent == '+') {
-            currentInput.textContent = plus(previousInput.textContent, currentInput.textContent);
+        if (operatorSymbol.textContent == '+' || operatorSymbol.textContent == '-' || operatorSymbol.textContent == '*' || operatorSymbol.textContent == '÷') {
+            if (operatorSymbol.textContent == '+') {
+                let finalAdd = Number(previousInput.textContent) + Number(currentInput.textContent);
+                previousInput.textContent = currentInput.textContent;
+                currentInput.textContent = String(finalAdd);
+            }
+            else if (operatorSymbol.textContent == '-') {
+                let finalSub = Number(previousInput.textContent) - Number(currentInput.textContent);
+                previousInput.textContent = currentInput.textContent;
+                currentInput.textContent = String(finalSub);
+            }
+            else if (operatorSymbol.textContent == '*') {
+                let finalMult = Number(previousInput.textContent) * Number(currentInput.textContent);
+                previousInput.textContent = currentInput.textContent;
+                currentInput.textContent = String(finalMult);
+            }
+            else if (operatorSymbol.textContent == '÷') {
+                let finalDiv = Number(previousInput.textContent) / Number(currentInput.textContent);
+                previousInput.textContent = currentInput.textContent;
+                currentInput.textContent = String(finalDiv);
+            }
+            equal.textContent = '=';
         }
-        else if (operatorSymbol.textContent == '-') {
-            currentInput.textContent = minus(previousInput.textContent, currentInput.textContent);
+        else {
+            operatorSymbol.textContent = '';
+            previousInput.textContent = '';
+            equal.textContent = '';
         }
-        else if (operatorSymbol.textContent == '*') {
-            currentInput.textContent = into(previousInput.textContent, currentInput.textContent);
-        }
-        else if (operatorSymbol.textContent == '÷') {
-            currentInput.textContent = by(previousInput.textContent, currentInput.textContent);
-        }
-        equal.textContent = '=';
-        previousInput.textContent = currentInput.textContent;
     }
 }
 /* document.addEventListener(
