@@ -10,10 +10,28 @@ const clear = document.querySelector('.clear');
 const equals = document.querySelector('body');
 
 clear.onclick = () => {
-    operatorSymbol.textContent = '';
-    previousInput.textContent = '';
-    equal.textContent = '';
-    currentInput.textContent = '0';
+    if (equal.textContent == '=') {
+        operatorSymbol.textContent = '';
+        previousInput.textContent = '';
+        equal.textContent = '';
+        currentInput.textContent = '0';
+    }
+    else if (equal.textContent == '') {
+        if (operatorSymbol.textContent != '') {
+            if (currentInput.textContent == '0') {
+                operatorSymbol.textContent = '';
+                currentInput.textContent = previousInput.textContent;
+                previousInput.textContent = '';
+            }
+            else if (currentInput.textContent != '0') {
+                currentInput.textContent = currentInput.textContent.slice(0, -1);
+            }
+        }
+
+        else if (operatorSymbol.textContent == '') {
+            currentInput.textContent = currentInput.textContent.slice(0, -1);
+        }
+    }
 };
 /* document.addEventListener(
     "keyup",
