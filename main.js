@@ -69,8 +69,27 @@ addition.onclick = () => {
         currentInput.textContent = '0';
     }
     else {
-        previousInput.textContent = plus(previousInput.textContent, currentInput.textContent);
-        currentInput.textContent = '0';
+        if (operatorSymbol.textContent == '-') {
+            previousInput.textContent = minus(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '+';
+        }
+        else if (operatorSymbol.textContent == '*') {
+            previousInput.textContent = into(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '+';
+        }
+        else if (operatorSymbol.textContent == '÷') {
+            previousInput.textContent = by(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '+';
+        }
+        else {
+            previousInput.textContent = plus(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '+';
+        }
+
     }
 };
 substraction.onclick = () => {
@@ -80,8 +99,26 @@ substraction.onclick = () => {
         currentInput.textContent = '0';
     }
     else {
-        previousInput.textContent = minus(previousInput.textContent, currentInput.textContent);
-        currentInput.textContent = '0';
+        if (operatorSymbol.textContent == '+') {
+            previousInput.textContent = plus(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '-';
+        }
+        else if (operatorSymbol.textContent == '*') {
+            previousInput.textContent = into(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '-';
+        }
+        else if (operatorSymbol.textContent == '÷') {
+            previousInput.textContent = by(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '-';
+        }
+        else {
+            previousInput.textContent = minus(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '-';
+        }
     }
 };
 multiplication.onclick = () => {
@@ -91,8 +128,26 @@ multiplication.onclick = () => {
         currentInput.textContent = '0';
     }
     else {
-        previousInput.textContent = into(previousInput.textContent, currentInput.textContent);
-        currentInput.textContent = '0';
+        if (operatorSymbol.textContent == '+') {
+            previousInput.textContent = plus(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '*';
+        }
+        else if (operatorSymbol.textContent == '-') {
+            previousInput.textContent = minus(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '*';
+        }
+        else if (operatorSymbol.textContent == '÷') {
+            previousInput.textContent = by(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '*';
+        }
+        else {
+            previousInput.textContent = plus(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '*';
+        }
     }
 };
 division.onclick = () => {
@@ -102,8 +157,26 @@ division.onclick = () => {
         currentInput.textContent = '0';
     }
     else {
-        previousInput.textContent = by(previousInput.textContent, currentInput.textContent);
-        currentInput.textContent = '0';
+        if (operatorSymbol.textContent == '+') {
+            previousInput.textContent = plus(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '÷';
+        }
+        else if (operatorSymbol.textContent == '-') {
+            previousInput.textContent = minus(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '÷';
+        }
+        else if (operatorSymbol.textContent == '*') {
+            previousInput.textContent = into(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '÷';
+        }
+        else {
+            previousInput.textContent = by(previousInput.textContent, currentInput.textContent);
+            currentInput.textContent = '0';
+            operatorSymbol.textContent = '÷';
+        }
     }
 };
 
