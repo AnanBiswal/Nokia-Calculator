@@ -9,5 +9,3 @@ All the operators, clear button is on the screen and 'ENTER' key acts as final e
 ## N.B: If you are not familiar with Nokia 105 calculator program, then it is recommended to check how it works on the web.
 
 ### Currently known issue: It is possible to keep typing numbers, along with the final result, after the final equals.
-
-Hi How are you?
